@@ -1,0 +1,79 @@
+@hostname = localhost
+@port = 8000
+@baseUrl = http://{{hostname}}:{{port}}
+
+###
+GET {{baseUrl}}/api/items
+Content-Type: application/json
+
+###
+POST {{baseUrl}}/api/items
+Content-Type: application/json
+
+{
+  "name": "Laptop",
+  "description": "High-performance laptop",
+  "price": 999.99,
+  "quantity": 5
+}
+
+###
+POST {{baseUrl}}/api/items
+Content-Type: application/json
+
+{
+  "name": "Mouse",
+  "description": "Wireless mouse",
+  "price": 29.99,
+  "quantity": 20
+}
+
+###
+GET {{baseUrl}}/api/items/1
+Content-Type: application/json
+
+###
+PUT {{baseUrl}}/api/items/1
+Content-Type: application/json
+
+{
+  "name": "Laptop Pro",
+  "description": "High-performance laptop updated",
+  "price": 1299.99,
+  "quantity": 3
+}
+
+###
+DELETE {{baseUrl}}/api/items/1
+Content-Type: application/json
+
+###
+GET {{baseUrl}}/api/users
+Content-Type: application/json
+
+###
+POST {{baseUrl}}/api/users
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "password123"
+}
+
+###
+GET {{baseUrl}}/api/users/1
+Content-Type: application/json
+
+###
+PUT {{baseUrl}}/api/users/1
+Content-Type: application/json
+
+{
+  "name": "John Updated",
+  "email": "john.updated@example.com"
+}
+
+###
+DELETE {{baseUrl}}/api/users/1
+Content-Type: application/json
